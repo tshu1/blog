@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Try and Error</title>
+    <link>https://tshu1.tech/posts/</link>
+    <description>Recent content in Posts on Try and Error</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <lastBuildDate>Sun, 25 Oct 2020 22:48:42 +0900</lastBuildDate><atom:link href="https://tshu1.tech/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ブログをロリポップ！で公開する</title>
+      <link>https://tshu1.tech/posts/my-first-posts/</link>
+      <pubDate>Sun, 25 Oct 2020 22:48:42 +0900</pubDate>
+      
+      <guid>https://tshu1.tech/posts/my-first-posts/</guid>
+      <description>なぜ、ロリポップ！ 私が関わっているサービスだから。 3年半ぶりに、復帰することになり、改めて自分の係るサービスを使って良し悪しを体験したいと思ったから。
+ブログツールの選定 世の中にはいろんなブログサービス(Amebaブログ/はてなブログ/JUGEM/note/etc&amp;hellip;)やCMS(Wordpress/Drupal/Joomla/etc&amp;hellip;)がありますが、私は以下の理由で静的ジェネレータが良いと考えてます。
+ 動作が軽量で、ページの表示速度が早い 静的ページなので、セキュリティがリスクが低い 移行が容易  静的ジェネレータの選定 ここは、個人の趣味趣向になるかと思います。私は、Golangの勉強を始めようと考えていたところだったので、Golang製のものがあればそれにしようと考えていたので、HUGO一択でした。 静的ジェネレータで検索するといろいろと出てきますので、試してみてから決めるというのも1つの方法だと思います。
+HUGOのインストールと設定 まずは、Quick Startに従ってひとまず動かして見るというのをおすすめします。 その後、自分の気に入ったテーマを探してみて気に入ったテーマのサイトに従ってテーマのインストールと設定を進めていきます。 私は、Binarioを選択しました。 最近更新されていたのと、configのサンプルもあり、マニュアル的なものも必要十分だったのが決め手です。もちろんデザインもですがｗ
+以下のような感じで、設定をいじっては、ブラウザで表示して何がどうなったかを確認することを繰り返していくと、ある程度手元のPC上にブログの環境が整っていきます。
+$ vim config.toml $ hugo server -D ブラウザで確認 納得の行く設定が出来たら、ブログを公開していきます。
+ロリポップ！へのデプロイ SSHを有効にする ブログのリポジトリをcloneする 定期的にcloneするようにcronの設定を有効にする </description>
+    </item>
+    
+  </channel>
+</rss>

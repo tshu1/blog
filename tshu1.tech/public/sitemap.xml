@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://tshu1.tech/tags/blog/</loc>
+    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/categories/</loc>
+    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/tags/golang/</loc>
+    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/categories/other/</loc>
+    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/posts/</loc>
+    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/tags/</loc>
+    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/</loc>
+    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/posts/my-first-posts/</loc>
+    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
+  </url>
+  
+</urlset>

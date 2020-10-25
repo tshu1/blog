@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Try and Error</title>
+    <link>https://tshu1.tech/tags/</link>
+    <description>Recent content in Tags on Try and Error</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <lastBuildDate>Sun, 25 Oct 2020 22:48:42 +0900</lastBuildDate><atom:link href="https://tshu1.tech/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog</title>
+      <link>https://tshu1.tech/tags/blog/</link>
+      <pubDate>Sun, 25 Oct 2020 22:48:42 +0900</pubDate>
+      
+      <guid>https://tshu1.tech/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://tshu1.tech/tags/golang/</link>
+      <pubDate>Sun, 25 Oct 2020 22:48:42 +0900</pubDate>
+      
+      <guid>https://tshu1.tech/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
