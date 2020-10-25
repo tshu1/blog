@@ -15,7 +15,16 @@
 HUGOのインストールと設定 まずは、Quick Startに従ってひとまず動かして見るというのをおすすめします。 その後、自分の気に入ったテーマを探してみて気に入ったテーマのサイトに従ってテーマのインストールと設定を進めていきます。 私は、Binarioを選択しました。 最近更新されていたのと、configのサンプルもあり、マニュアル的なものも必要十分だったのが決め手です。もちろんデザインもですがｗ
 以下のような感じで、設定をいじっては、ブラウザで表示して何がどうなったかを確認することを繰り返していくと、ある程度手元のPC上にブログの環境が整っていきます。
 $ vim config.toml $ hugo server -D ブラウザで確認 納得の行く設定が出来たら、ブログを公開していきます。
-ロリポップ！へのデプロイ SSHを有効にする ブログのリポジトリをcloneする 定期的にcloneするようにcronの設定を有効にする " />
+ロリポップ！へのデプロイ ロリポップでは、gitが使えるので、手元のPCでビルドしたコードをGithubで管理し、サーバ上からGithubのコードをPullする形でデプロイを実現しようと思います。 GithubActions使ってブログ記事が更新されたらPushするというのもできなくなないと思いますが、SSH鍵の管理とかぱっと思いつかなかったので、まずはお手軽に実現できる方法で設定しておきます。 より良い方法が見つかったら、変更するようにします。
+HUGOのビルド ビルドを実行して、静的ファイルを生成します。
+hugo -D ビルドが完了するとpublicフォルダ配下にファイルが生成されるので、public配下をgit addして、commit後、githubへpushしておきます。
+独自ドメイン設定 せっかくなので、ムームードメインでドメインを取得して、独自ドメインを設定します。 週末50円のセールしていたのですが、技術的なブログを書こうかと考えていたので、tshu1.techドメインを218円でゲット。
+独自ドメインの公開フォルダを設定する 今回は、Githubのディレクトリ構成が以下のようになっているので、それに合わせる形で公開フォルダを設定する
+blog - tshu1.tech(hugo new site で指定した名前) - public - index.html 設定した公開フォルダ
+blog/tshu1.tech/public SSHを有効にする ロリポップ！のユーザ専用ページから、SSHを有効にします。 有効にしたら、Terminalソフトを使用してサーバへSSHログインしておきます。
+ブログのリポジトリをcloneする 先程、githubへpushした静的ファイルをサーバへダウンロードします。
+git clone URL blog 定期的にcloneするようにcronの設定を有効にする 定期実行するスクリプトを作成します。 このスクリプトもブログと一緒に管理しておきます。
+#!/bin/sh cd ~/web/blog git pull origin main  github管理のディレクトリ構成は以下のとおり  blog/ ├── README." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tshu1.tech/posts/my-first-posts/" />
 <meta property="article:published_time" content="2020-10-25T22:48:42+09:00" />
@@ -28,10 +37,19 @@ $ vim config.toml $ hugo server -D ブラウザで確認 納得の行く設定�
 HUGOのインストールと設定 まずは、Quick Startに従ってひとまず動かして見るというのをおすすめします。 その後、自分の気に入ったテーマを探してみて気に入ったテーマのサイトに従ってテーマのインストールと設定を進めていきます。 私は、Binarioを選択しました。 最近更新されていたのと、configのサンプルもあり、マニュアル的なものも必要十分だったのが決め手です。もちろんデザインもですがｗ
 以下のような感じで、設定をいじっては、ブラウザで表示して何がどうなったかを確認することを繰り返していくと、ある程度手元のPC上にブログの環境が整っていきます。
 $ vim config.toml $ hugo server -D ブラウザで確認 納得の行く設定が出来たら、ブログを公開していきます。
-ロリポップ！へのデプロイ SSHを有効にする ブログのリポジトリをcloneする 定期的にcloneするようにcronの設定を有効にする ">
+ロリポップ！へのデプロイ ロリポップでは、gitが使えるので、手元のPCでビルドしたコードをGithubで管理し、サーバ上からGithubのコードをPullする形でデプロイを実現しようと思います。 GithubActions使ってブログ記事が更新されたらPushするというのもできなくなないと思いますが、SSH鍵の管理とかぱっと思いつかなかったので、まずはお手軽に実現できる方法で設定しておきます。 より良い方法が見つかったら、変更するようにします。
+HUGOのビルド ビルドを実行して、静的ファイルを生成します。
+hugo -D ビルドが完了するとpublicフォルダ配下にファイルが生成されるので、public配下をgit addして、commit後、githubへpushしておきます。
+独自ドメイン設定 せっかくなので、ムームードメインでドメインを取得して、独自ドメインを設定します。 週末50円のセールしていたのですが、技術的なブログを書こうかと考えていたので、tshu1.techドメインを218円でゲット。
+独自ドメインの公開フォルダを設定する 今回は、Githubのディレクトリ構成が以下のようになっているので、それに合わせる形で公開フォルダを設定する
+blog - tshu1.tech(hugo new site で指定した名前) - public - index.html 設定した公開フォルダ
+blog/tshu1.tech/public SSHを有効にする ロリポップ！のユーザ専用ページから、SSHを有効にします。 有効にしたら、Terminalソフトを使用してサーバへSSHログインしておきます。
+ブログのリポジトリをcloneする 先程、githubへpushした静的ファイルをサーバへダウンロードします。
+git clone URL blog 定期的にcloneするようにcronの設定を有効にする 定期実行するスクリプトを作成します。 このスクリプトもブログと一緒に管理しておきます。
+#!/bin/sh cd ~/web/blog git pull origin main  github管理のディレクトリ構成は以下のとおり  blog/ ├── README.">
 <meta itemprop="datePublished" content="2020-10-25T22:48:42+09:00" />
 <meta itemprop="dateModified" content="2020-10-25T22:48:42+09:00" />
-<meta itemprop="wordCount" content="31">
+<meta itemprop="wordCount" content="171">
 
 
 
@@ -45,7 +63,16 @@ $ vim config.toml $ hugo server -D ブラウザで確認 納得の行く設定�
 HUGOのインストールと設定 まずは、Quick Startに従ってひとまず動かして見るというのをおすすめします。 その後、自分の気に入ったテーマを探してみて気に入ったテーマのサイトに従ってテーマのインストールと設定を進めていきます。 私は、Binarioを選択しました。 最近更新されていたのと、configのサンプルもあり、マニュアル的なものも必要十分だったのが決め手です。もちろんデザインもですがｗ
 以下のような感じで、設定をいじっては、ブラウザで表示して何がどうなったかを確認することを繰り返していくと、ある程度手元のPC上にブログの環境が整っていきます。
 $ vim config.toml $ hugo server -D ブラウザで確認 納得の行く設定が出来たら、ブログを公開していきます。
-ロリポップ！へのデプロイ SSHを有効にする ブログのリポジトリをcloneする 定期的にcloneするようにcronの設定を有効にする "/>
+ロリポップ！へのデプロイ ロリポップでは、gitが使えるので、手元のPCでビルドしたコードをGithubで管理し、サーバ上からGithubのコードをPullする形でデプロイを実現しようと思います。 GithubActions使ってブログ記事が更新されたらPushするというのもできなくなないと思いますが、SSH鍵の管理とかぱっと思いつかなかったので、まずはお手軽に実現できる方法で設定しておきます。 より良い方法が見つかったら、変更するようにします。
+HUGOのビルド ビルドを実行して、静的ファイルを生成します。
+hugo -D ビルドが完了するとpublicフォルダ配下にファイルが生成されるので、public配下をgit addして、commit後、githubへpushしておきます。
+独自ドメイン設定 せっかくなので、ムームードメインでドメインを取得して、独自ドメインを設定します。 週末50円のセールしていたのですが、技術的なブログを書こうかと考えていたので、tshu1.techドメインを218円でゲット。
+独自ドメインの公開フォルダを設定する 今回は、Githubのディレクトリ構成が以下のようになっているので、それに合わせる形で公開フォルダを設定する
+blog - tshu1.tech(hugo new site で指定した名前) - public - index.html 設定した公開フォルダ
+blog/tshu1.tech/public SSHを有効にする ロリポップ！のユーザ専用ページから、SSHを有効にします。 有効にしたら、Terminalソフトを使用してサーバへSSHログインしておきます。
+ブログのリポジトリをcloneする 先程、githubへpushした静的ファイルをサーバへダウンロードします。
+git clone URL blog 定期的にcloneするようにcronの設定を有効にする 定期実行するスクリプトを作成します。 このスクリプトもブログと一緒に管理しておきます。
+#!/bin/sh cd ~/web/blog git pull origin main  github管理のディレクトリ構成は以下のとおり  blog/ ├── README."/>
 
 	<link rel="stylesheet" href="/css/bundle.css">
 	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
@@ -97,6 +124,9 @@ $ vim config.toml $ hugo server -D ブラウザで確認 納得の行く設定�
     <li><a href="#hugoのインストールと設定">HUGOのインストールと設定</a></li>
     <li><a href="#ロリポップへのデプロイ">ロリポップ！へのデプロイ</a>
       <ul>
+        <li><a href="#hugoのビルド">HUGOのビルド</a></li>
+        <li><a href="#独自ドメイン設定">独自ドメイン設定</a></li>
+        <li><a href="#独自ドメインの公開フォルダを設定する">独自ドメインの公開フォルダを設定する</a></li>
         <li><a href="#sshを有効にする">SSHを有効にする</a></li>
         <li><a href="#ブログのリポジトリをcloneする">ブログのリポジトリをcloneする</a></li>
         <li><a href="#定期的にcloneするようにcronの設定を有効にする">定期的にcloneするようにcronの設定を有効にする</a></li>
@@ -129,9 +159,77 @@ $ hugo server -D
 ブラウザで確認
 </code></pre><p>納得の行く設定が出来たら、ブログを公開していきます。</p>
 <h2 id="ロリポップへのデプロイ">ロリポップ！へのデプロイ</h2>
-<h3 id="sshを有効にする">SSHを有効にする</h3>
+<p>ロリポップでは、gitが使えるので、手元のPCでビルドしたコードをGithubで管理し、サーバ上からGithubのコードをPullする形でデプロイを実現しようと思います。
+GithubActions使ってブログ記事が更新されたらPushするというのもできなくなないと思いますが、SSH鍵の管理とかぱっと思いつかなかったので、まずはお手軽に実現できる方法で設定しておきます。
+より良い方法が見つかったら、変更するようにします。</p>
+<h3 id="hugoのビルド">HUGOのビルド</h3>
+<p>ビルドを実行して、静的ファイルを生成します。</p>
+<pre><code>hugo -D
+</code></pre><p>ビルドが完了するとpublicフォルダ配下にファイルが生成されるので、public配下をgit addして、commit後、githubへpushしておきます。</p>
+<h3 id="独自ドメイン設定">独自ドメイン設定</h3>
+<p>せっかくなので、<a href="https://muumuu-domain.com/">ムームードメイン</a>でドメインを取得して、独自ドメインを設定します。
+週末50円のセールしていたのですが、技術的なブログを書こうかと考えていたので、tshu1.techドメインを218円でゲット。</p>
+<h3 id="独自ドメインの公開フォルダを設定する">独自ドメインの公開フォルダを設定する</h3>
+<p>今回は、Githubのディレクトリ構成が以下のようになっているので、それに合わせる形で<a href="https://user.lolipop.jp/?mode=domain">公開フォルダ</a>を設定する</p>
+<pre><code>blog - tshu1.tech(hugo new site で指定した名前) - public - index.html
+</code></pre><p>設定した公開フォルダ</p>
+<pre><code>blog/tshu1.tech/public
+</code></pre><h3 id="sshを有効にする">SSHを有効にする</h3>
+<p>ロリポップ！のユーザ専用ページから、<a href="https://user.lolipop.jp/?mode=ssh">SSH</a>を有効にします。
+有効にしたら、Terminalソフトを使用してサーバへSSHログインしておきます。</p>
 <h3 id="ブログのリポジトリをcloneする">ブログのリポジトリをcloneする</h3>
-<h3 id="定期的にcloneするようにcronの設定を有効にする">定期的にcloneするようにcronの設定を有効にする</h3>
+<p>先程、githubへpushした静的ファイルをサーバへダウンロードします。</p>
+<pre><code>git clone URL blog
+</code></pre><h3 id="定期的にcloneするようにcronの設定を有効にする">定期的にcloneするようにcronの設定を有効にする</h3>
+<p>定期実行するスクリプトを作成します。
+このスクリプトもブログと一緒に管理しておきます。</p>
+<pre><code>#!/bin/sh
+
+cd ~/web/blog
+git pull origin main
+</code></pre><ul>
+<li>github管理のディレクトリ構成は以下のとおり</li>
+</ul>
+<pre><code>blog/
+├── README.md
+└── tshu1.tech
+    ├── archetypes
+    │   └── default.md
+    ├── config.toml
+    ├── content
+    │   └── posts
+    ├── data
+    ├── git-clone.sh
+    ├── layouts
+    ├── public
+    │   ├── 404.html
+    │   ├── apple-touch-icon.png
+    │   ├── categories
+    │   ├── css
+    │   ├── favicon.ico
+    │   ├── icons
+    │   ├── img
+    │   ├── index.html
+    │   ├── index.xml
+    │   ├── js
+    │   ├── page
+    │   ├── posts
+    │   ├── sitemap.xml
+    │   └── tags
+    ├── resources
+    │   └── _gen
+    ├── static
+    └── themes
+        ├── ananke
+        └── binario
+</code></pre><p><a href="https://user.lolipop.jp/?mode=cron">ユーザ専用ページのcron設定</a>から、設定名、実行時間、実行ファイルパスを指定して設定を保存します。</p>
+<p>サーバへログインし、スクリプトをダウンロードして、パーミッションを変更します。</p>
+<pre><code>$ cd ~/web/blog
+$ git pull origin main
+$ chmod 700 git-clone.sh
+</code></pre><p>後は、予定した時間に更新されたファイルが表示されることを確認して終了です。
+導入時については、実行時間の間隔を短くして間違いなく更新されることを確認してから、本来更新したい時間に設定すると良いと思います。</p>
+<p>これで、ブログかける環境が整ったので、継続してアウトプットしていこうと思います。</p>
 </div>
 				
 				<footer class="entry__footer">

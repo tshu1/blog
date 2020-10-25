@@ -60,7 +60,16 @@
 HUGOのインストールと設定 まずは、Quick Startに従ってひとまず動かして見るというのをおすすめします。 その後、自分の気に入ったテーマを探してみて気に入ったテーマのサイトに従ってテーマのインストールと設定を進めていきます。 私は、Binarioを選択しました。 最近更新されていたのと、configのサンプルもあり、マニュアル的なものも必要十分だったのが決め手です。もちろんデザインもですがｗ
 以下のような感じで、設定をいじっては、ブラウザで表示して何がどうなったかを確認することを繰り返していくと、ある程度手元のPC上にブログの環境が整っていきます。
 $ vim config.toml $ hugo server -D ブラウザで確認 納得の行く設定が出来たら、ブログを公開していきます。
-ロリポップ！へのデプロイ SSHを有効にする ブログのリポジトリをcloneする 定期的にcloneするようにcronの設定を有効にする </div>
+ロリポップ！へのデプロイ ロリポップでは、gitが使えるので、手元のPCでビルドしたコードをGithubで管理し、サーバ上からGithubのコードをPullする形でデプロイを実現しようと思います。 GithubActions使ってブログ記事が更新されたらPushするというのもできなくなないと思いますが、SSH鍵の管理とかぱっと思いつかなかったので、まずはお手軽に実現できる方法で設定しておきます。 より良い方法が見つかったら、変更するようにします。
+HUGOのビルド ビルドを実行して、静的ファイルを生成します。
+hugo -D ビルドが完了するとpublicフォルダ配下にファイルが生成されるので、public配下をgit addして、commit後、githubへpushしておきます。
+独自ドメイン設定 せっかくなので、ムームードメインでドメインを取得して、独自ドメインを設定します。 週末50円のセールしていたのですが、技術的なブログを書こうかと考えていたので、tshu1.techドメインを218円でゲット。
+独自ドメインの公開フォルダを設定する 今回は、Githubのディレクトリ構成が以下のようになっているので、それに合わせる形で公開フォルダを設定する
+blog - tshu1.tech(hugo new site で指定した名前) - public - index.html 設定した公開フォルダ
+blog/tshu1.tech/public SSHを有効にする ロリポップ！のユーザ専用ページから、SSHを有効にします。 有効にしたら、Terminalソフトを使用してサーバへSSHログインしておきます。
+ブログのリポジトリをcloneする 先程、githubへpushした静的ファイルをサーバへダウンロードします。
+git clone URL blog 定期的にcloneするようにcronの設定を有効にする 定期実行するスクリプトを作成します。 このスクリプトもブログと一緒に管理しておきます。
+#!/bin/sh cd ~/web/blog git pull origin main  github管理のディレクトリ構成は以下のとおり  blog/ ├── README.</div>
 	<div class="entry__meta meta mt tar">
 	<time class="entry__meta-published meta-published" datetime="2020-10-25T22:48:42&#43;09:00">October 25, 2020</time>
 <span class="entry__meta-categories meta-categories">
