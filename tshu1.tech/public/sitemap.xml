@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tshu1.tech/tags/blog/</loc>
-    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
+    <loc>https://tshu1.tech/tags/ansible/</loc>
+    <lastmod>2021-01-04T00:30:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/posts/2021-01-04/</loc>
+    <lastmod>2021-01-04T00:30:03+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://tshu1.tech/categories/</loc>
+    <lastmod>2021-01-04T00:30:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/categories/linux/</loc>
+    <lastmod>2021-01-04T00:30:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/posts/</loc>
+    <lastmod>2021-01-04T00:30:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/tags/</loc>
+    <lastmod>2021-01-04T00:30:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/</loc>
+    <lastmod>2021-01-04T00:30:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/tags/ubuntu/</loc>
+    <lastmod>2021-01-04T00:30:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tshu1.tech/tags/blog/</loc>
     <lastmod>2020-10-25T22:48:42+09:00</lastmod>
   </url>
   
@@ -19,21 +54,6 @@
   
   <url>
     <loc>https://tshu1.tech/categories/other/</loc>
-    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tshu1.tech/posts/</loc>
-    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tshu1.tech/tags/</loc>
-    <lastmod>2020-10-25T22:48:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tshu1.tech/</loc>
     <lastmod>2020-10-25T22:48:42+09:00</lastmod>
   </url>
   

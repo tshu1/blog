@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Try and Error</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sun, 25 Oct 2020 22:48:42 +0900</lastBuildDate><atom:link href="https://tshu1.tech/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2021 00:30:03 +0900</lastBuildDate><atom:link href="https://tshu1.tech/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>https://tshu1.tech/categories/linux/</link>
+      <pubDate>Mon, 04 Jan 2021 00:30:03 +0900</pubDate>
+      
+      <guid>https://tshu1.tech/categories/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>other</title>
       <link>https://tshu1.tech/categories/other/</link>

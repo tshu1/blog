@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html class="no-js" lang="jp">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#1b1b1b">
+	<title>Automatic Updates | Try and Error</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Automatic Updates" />
+<meta property="og:description" content="この記事について  CentOSの終了に伴って、Ubuntuへ移行するとしたら、どのような設定を実施するかを調査し、実際に設定した内容についてまとめるものです 項目が多岐に渡るので、空いた時間でアウトプットできる単位で、まとめていきます すべてを試す訳ではなく、必要と思われるものや今後使えそうなものについて記載していきます 構築するにあたり、ansibleで実装していきます  参考ドキュメント https://ubuntu.com/server/docs/installation
+前提  検証用のサーバとして構築する  Automatic Updates タスクの新規作成 --- /dev/null &#43;&#43;&#43; b/base/tasks/automatic-updates.yml @@ -0,0 &#43;1,5 @@ &#43;--- &#43;- name: Automatic Updates &#43; apt: &#43; name: unattended-upgrades &#43; state: present diff --git a/base/tasks/main.yml b/base/tasks/main.yml index 99a3e15..efa92af 100644 --- a/base/tasks/main.yml &#43;&#43;&#43; b/base/tasks/main.yml @@ -1,2 &#43;1,3 @@  --- # tasks file for base &#43;- include: automatic-updates.yml ansible実行 22:21 $ ansible-playbook -i inventory -l ubuntu -b playbook." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tshu1.tech/posts/2021-01-04/" />
+<meta property="article:published_time" content="2021-01-04T00:30:03+09:00" />
+<meta property="article:modified_time" content="2021-01-04T00:30:03+09:00" />
+
+		<meta itemprop="name" content="Automatic Updates">
+<meta itemprop="description" content="この記事について  CentOSの終了に伴って、Ubuntuへ移行するとしたら、どのような設定を実施するかを調査し、実際に設定した内容についてまとめるものです 項目が多岐に渡るので、空いた時間でアウトプットできる単位で、まとめていきます すべてを試す訳ではなく、必要と思われるものや今後使えそうなものについて記載していきます 構築するにあたり、ansibleで実装していきます  参考ドキュメント https://ubuntu.com/server/docs/installation
+前提  検証用のサーバとして構築する  Automatic Updates タスクの新規作成 --- /dev/null &#43;&#43;&#43; b/base/tasks/automatic-updates.yml @@ -0,0 &#43;1,5 @@ &#43;--- &#43;- name: Automatic Updates &#43; apt: &#43; name: unattended-upgrades &#43; state: present diff --git a/base/tasks/main.yml b/base/tasks/main.yml index 99a3e15..efa92af 100644 --- a/base/tasks/main.yml &#43;&#43;&#43; b/base/tasks/main.yml @@ -1,2 &#43;1,3 @@  --- # tasks file for base &#43;- include: automatic-updates.yml ansible実行 22:21 $ ansible-playbook -i inventory -l ubuntu -b playbook.">
+<meta itemprop="datePublished" content="2021-01-04T00:30:03+09:00" />
+<meta itemprop="dateModified" content="2021-01-04T00:30:03+09:00" />
+<meta itemprop="wordCount" content="1654">
+
+
+
+<meta itemprop="keywords" content="Ubuntu,Ansible," />
+
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Automatic Updates"/>
+<meta name="twitter:description" content="この記事について  CentOSの終了に伴って、Ubuntuへ移行するとしたら、どのような設定を実施するかを調査し、実際に設定した内容についてまとめるものです 項目が多岐に渡るので、空いた時間でアウトプットできる単位で、まとめていきます すべてを試す訳ではなく、必要と思われるものや今後使えそうなものについて記載していきます 構築するにあたり、ansibleで実装していきます  参考ドキュメント https://ubuntu.com/server/docs/installation
+前提  検証用のサーバとして構築する  Automatic Updates タスクの新規作成 --- /dev/null &#43;&#43;&#43; b/base/tasks/automatic-updates.yml @@ -0,0 &#43;1,5 @@ &#43;--- &#43;- name: Automatic Updates &#43; apt: &#43; name: unattended-upgrades &#43; state: present diff --git a/base/tasks/main.yml b/base/tasks/main.yml index 99a3e15..efa92af 100644 --- a/base/tasks/main.yml &#43;&#43;&#43; b/base/tasks/main.yml @@ -1,2 &#43;1,3 @@  --- # tasks file for base &#43;- include: automatic-updates.yml ansible実行 22:21 $ ansible-playbook -i inventory -l ubuntu -b playbook."/>
+
+	<link rel="stylesheet" href="/css/bundle.css">
+	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
+	<link rel="icon" href="/icons/32.png" sizes="32x32" type="image/png">
+		
+</head>
+<body class="body kind-page">
+	<header class="header">
+	<a class="logo" href="/">Try and Error</a>
+	
+</header>
+	<div class="primary">
+	
+	<main class="main">
+		
+<nav class="breadcrumb block" aria-label="breadcrumb">
+	<ol class="breadcrumb__list">
+		
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/">Blog</a>
+		</li>
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/posts/">Posts</a>
+		</li>
+		<li class="breadcrumbs__item breadcrumb__item--active" aria-current="page">Automatic Updates</li>
+	</ol>
+</nav>
+		<div class="single block">
+			<article class="entry">
+	<div class="entry__meta meta mb">
+	<time class="entry__meta-published meta-published" datetime="2021-01-04T00:30:03&#43;09:00">January 04, 2021</time>
+<span class="entry__meta-categories meta-categories">
+	<span class="meta-categories__list">Categories:
+		<a class="meta-categories__link" href="/categories/linux/" rel="category">Linux</a>
+	</span>
+</span>
+	</div>
+				<h1 class="entry__title">Automatic Updates</h1>
+<details class="entry__toc toc" open>
+	<summary class="toc__title">Table of Contents</summary>
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#この記事について">この記事について</a></li>
+    <li><a href="#参考ドキュメント">参考ドキュメント</a></li>
+    <li><a href="#前提">前提</a></li>
+    <li><a href="#automatic-updateshttpsubuntucomserverdocspackage-management"><a href="https://ubuntu.com/server/docs/package-management">Automatic Updates</a></a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</details>
+				<div class="entry__content"><h2 id="この記事について">この記事について</h2>
+<ul>
+<li><a href="https://blog.centos.org/2020/12/future-is-centos-stream/">CentOSの終了</a>に伴って、Ubuntuへ移行するとしたら、どのような設定を実施するかを調査し、実際に設定した内容についてまとめるものです</li>
+<li>項目が多岐に渡るので、空いた時間でアウトプットできる単位で、まとめていきます</li>
+<li>すべてを試す訳ではなく、必要と思われるものや今後使えそうなものについて記載していきます</li>
+<li>構築するにあたり、ansibleで実装していきます</li>
+</ul>
+<h2 id="参考ドキュメント">参考ドキュメント</h2>
+<p><a href="https://ubuntu.com/server/docs/installation">https://ubuntu.com/server/docs/installation</a></p>
+<h2 id="前提">前提</h2>
+<ul>
+<li>検証用のサーバとして構築する</li>
+</ul>
+<h2 id="automatic-updateshttpsubuntucomserverdocspackage-management"><a href="https://ubuntu.com/server/docs/package-management">Automatic Updates</a></h2>
+<h4 id="タスクの新規作成">タスクの新規作成</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#f92672">--- /dev/null
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/base/tasks/automatic-updates.yml
+</span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -0,0 +1,5 @@
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">+---
+</span><span style="color:#a6e22e">+- name: Automatic Updates
+</span><span style="color:#a6e22e">+  apt:
+</span><span style="color:#a6e22e">+    name: unattended-upgrades
+</span><span style="color:#a6e22e">+    state: present
+</span><span style="color:#a6e22e"></span>diff --git a/base/tasks/main.yml b/base/tasks/main.yml
+index 99a3e15..efa92af 100644
+<span style="color:#f92672">--- a/base/tasks/main.yml
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/base/tasks/main.yml
+</span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -1,2 +1,3 @@
+</span><span style="color:#75715e"></span> ---
+ # tasks file for base
+<span style="color:#a6e22e">+- include: automatic-updates.yml
+</span></code></pre></div><h4 id="ansible実行">ansible実行</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+22:21 $ ansible-playbook -i inventory  -l ubuntu -b playbook.yml --syntax-check
+
+playbook: playbook.yml
+✔ ~/ghq/github.com/tshu1/ubuntu-2004 <span style="color:#f92672">[</span>base-settings L|✔<span style="color:#f92672">]</span>
+22:21 $ ansible-playbook -i inventory  -l ubuntu -b playbook.yml --list-task
+
+playbook: playbook.yml
+
+  play <span style="color:#75715e">#1 (all): all	TAGS: []</span>
+    tasks:
+      base : Automatic Updates	TAGS: <span style="color:#f92672">[]</span>
+
+
+22:21 $ ansible-playbook -i inventory  -l ubuntu -b playbook.yml --check
+
+PLAY <span style="color:#f92672">[</span>all<span style="color:#f92672">]</span> **************************************************************************************************************************
+
+TASK <span style="color:#f92672">[</span>Gathering Facts<span style="color:#f92672">]</span> **************************************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>base : Automatic Updates<span style="color:#f92672">]</span> *****************************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+PLAY RECAP **************************************************************************************************************************
+localhost                  : ok<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>    changed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    unreachable<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    failed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    skipped<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    rescued<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    ignored<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+
+
+22:22 $ ansible-playbook -i inventory  -l ubuntu -b playbook.yml
+
+PLAY <span style="color:#f92672">[</span>all<span style="color:#f92672">]</span> **************************************************************************************************************************
+
+TASK <span style="color:#f92672">[</span>Gathering Facts<span style="color:#f92672">]</span> **************************************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>base : Automatic Updates<span style="color:#f92672">]</span> *****************************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+PLAY RECAP **************************************************************************************************************************
+localhost                  : ok<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>    changed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    unreachable<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    failed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    skipped<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    rescued<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    ignored<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</code></pre></div><ul>
+<li>確認不足だったようで、もとからインストールされていたみたい</li>
+</ul>
+<h4 id="現行のファイルを手元に持ってきてansibleの管理対象とする">現行のファイルを手元に持ってきてansibleの管理対象とする</h4>
+<ul>
+<li>/etc/apt/apt.conf.d/50unattended-upgrades</li>
+<li>/etc/apt/apt.conf.d/20auto-upgrades</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+<span style="color:#75715e">## ファイルを取得</span>
+22:42 $ ansible ubuntu -i inventory -m fetch -a <span style="color:#e6db74">&#34;src=/etc/apt/apt.conf.d/50unattended-upgrades dest=./base/files/&#34;</span> -b
+localhost | CHANGED <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#34;changed&#34;</span>: true,
+    <span style="color:#e6db74">&#34;checksum&#34;</span>: <span style="color:#e6db74">&#34;7de96b69782cfb1d8feb2dc8e22b9da512b6495e&#34;</span>,
+    <span style="color:#e6db74">&#34;dest&#34;</span>: <span style="color:#e6db74">&#34;/Users/tshu1/ghq/github.com/tshu1/ubuntu-2004/base/files/localhost/etc/apt/apt.conf.d/50unattended-upgrades&#34;</span>,
+    <span style="color:#e6db74">&#34;md5sum&#34;</span>: <span style="color:#e6db74">&#34;6cfaf67893454c604aaef30a57e63521&#34;</span>,
+    <span style="color:#e6db74">&#34;remote_checksum&#34;</span>: <span style="color:#e6db74">&#34;7de96b69782cfb1d8feb2dc8e22b9da512b6495e&#34;</span>,
+    <span style="color:#e6db74">&#34;remote_md5sum&#34;</span>: null
+<span style="color:#f92672">}</span>
+
+
+22:43 $ ansible ubuntu -i inventory -m fetch -a <span style="color:#e6db74">&#34;src=/etc/apt/apt.conf.d/20auto-upgrades dest=./base/files/&#34;</span> -b
+localhost | CHANGED <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#34;changed&#34;</span>: true,
+    <span style="color:#e6db74">&#34;checksum&#34;</span>: <span style="color:#e6db74">&#34;91d0ccbd3dddaa6f5f5efeee64c42df4680170ba&#34;</span>,
+    <span style="color:#e6db74">&#34;dest&#34;</span>: <span style="color:#e6db74">&#34;/Users/tshu1/ghq/github.com/tshu1/ubuntu-2004/base/files/localhost/etc/apt/apt.conf.d/20auto-upgrades&#34;</span>,
+    <span style="color:#e6db74">&#34;md5sum&#34;</span>: <span style="color:#e6db74">&#34;1c261d6541420797f8b824d65ac5c197&#34;</span>,
+    <span style="color:#e6db74">&#34;remote_checksum&#34;</span>: <span style="color:#e6db74">&#34;91d0ccbd3dddaa6f5f5efeee64c42df4680170ba&#34;</span>,
+    <span style="color:#e6db74">&#34;remote_md5sum&#34;</span>: null
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">## ごみ処理</span>
+
+22:48 $ cd base/files/
+22:49 $ ls -la
+total <span style="color:#ae81ff">0</span>
+drwxr-xr-x   <span style="color:#ae81ff">3</span> tshu1  staff   <span style="color:#ae81ff">96</span>  <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">3</span> 22:42 .
+drwxr-xr-x  <span style="color:#ae81ff">12</span> tshu1  staff  <span style="color:#ae81ff">384</span>  <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">3</span> 14:08 ..
+drwxr-xr-x   <span style="color:#ae81ff">3</span> tshu1  staff   <span style="color:#ae81ff">96</span>  <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">3</span> 22:42 localhost
+22:49 $ mv localhost/etc .
+22:49 $ ls -la
+total <span style="color:#ae81ff">0</span>
+drwxr-xr-x   <span style="color:#ae81ff">4</span> tshu1  staff  <span style="color:#ae81ff">128</span>  <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">3</span> 22:49 .
+drwxr-xr-x  <span style="color:#ae81ff">12</span> tshu1  staff  <span style="color:#ae81ff">384</span>  <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">3</span> 14:08 ..
+drwxr-xr-x   <span style="color:#ae81ff">3</span> tshu1  staff   <span style="color:#ae81ff">96</span>  <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">3</span> 22:42 etc
+drwxr-xr-x   <span style="color:#ae81ff">2</span> tshu1  staff   <span style="color:#ae81ff">64</span>  <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">3</span> 22:49 localhost
+22:49 $ rmdir localhost/
+
+22:50 $ tree
+.
+├── README.md
+├── Vagrantfile
+├── ansible.cfg
+├── base
+│   ├── README.md
+│   ├── defaults
+│   │   └── main.yml
+│   ├── files
+│   │   └── etc
+│   │       └── apt
+│   │           └── apt.conf.d
+│   │               ├── 20auto-upgrades
+│   │               └── 50unattended-upgrades
+</code></pre></div><h4 id="automatic-updatesymlの修正">automatic-updates.ymlの修正</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">diff --git a/base/tasks/automatic-updates.yml b/base/tasks/automatic-updates.yml
+index f41c361..88c34e1 100644
+<span style="color:#f92672">--- a/base/tasks/automatic-updates.yml
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/base/tasks/automatic-updates.yml
+</span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -1,5 +1,12 @@
+</span><span style="color:#75715e"></span> ---
+<span style="color:#f92672">-- name: Automatic Updates
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+- name: Automatic Updates pkg install
+</span><span style="color:#a6e22e"></span>   apt:
+     name: unattended-upgrades
+     state: present
+<span style="color:#a6e22e">+- name: Automatic Updates config file copy to remote server
+</span><span style="color:#a6e22e">+  copy:
+</span><span style="color:#a6e22e">+    src: &#34;{{ role_path }}/files/etc/apt/apt.conf.d/{{ item }}&#34;
+</span><span style="color:#a6e22e">+    dest: &#34;/etc/apt/apt.conf.d/{{ item }}&#34;
+</span><span style="color:#a6e22e">+  with_items:
+</span><span style="color:#a6e22e">+    - 50unattended-upgrades
+</span><span style="color:#a6e22e">+    - 20auto-upgrades
+</span></code></pre></div><ul>
+<li>ansible実行結果
+<ul>
+<li>何も修正していないので、okのステータス</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">23:17 $ ansible-playbook -i inventory  -l ubuntu -b playbook.yml
+
+PLAY <span style="color:#f92672">[</span>all<span style="color:#f92672">]</span> **************************************************************************************************************************
+
+TASK <span style="color:#f92672">[</span>Gathering Facts<span style="color:#f92672">]</span> **************************************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>base : Automatic Updates pkg install<span style="color:#f92672">]</span> *****************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>base : Automatic Updates config file copy to remote server<span style="color:#f92672">]</span> *******************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">(</span>item<span style="color:#f92672">=</span>50unattended-upgrades<span style="color:#f92672">)</span>
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">(</span>item<span style="color:#f92672">=</span>20auto-upgrades<span style="color:#f92672">)</span>
+
+PLAY RECAP **************************************************************************************************************************
+localhost                  : ok<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>    changed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    unreachable<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    failed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    skipped<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    rescued<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    ignored<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+
+</code></pre></div><h4 id="ubuntuのdocumentsに記載がある通り以下の設定を追加する">UbuntuのDocumentsに記載がある通り以下の設定を追加する</h4>
+<ul>
+<li>毎日、upgrade可能なパッケージをダウンロードする</li>
+<li>毎週、パッケージファイルを削除する</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">diff --git a/base/files/etc/apt/apt.conf.d/20auto-upgrades b/base/files/etc/apt/apt.conf.d/20auto-upgrades
+index 8d6d7c8..5d37e9f 100644
+<span style="color:#f92672">--- a/base/files/etc/apt/apt.conf.d/20auto-upgrades
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/base/files/etc/apt/apt.conf.d/20auto-upgrades
+</span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -1,2 +1,4 @@
+</span><span style="color:#75715e"></span> APT::Periodic::Update-Package-Lists &#34;1&#34;;
+<span style="color:#a6e22e">+APT::Periodic::Download-Upgradeable-Packages &#34;1&#34;;
+</span><span style="color:#a6e22e">+APT::Periodic::AutocleanInterval &#34;7&#34;;
+</span><span style="color:#a6e22e"></span> APT::Periodic::Unattended-Upgrade &#34;1&#34;;
+</code></pre></div><ul>
+<li>ansible実行</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">23:27 $ ansible-playbook -i inventory  -l ubuntu -b playbook.yml
+
+PLAY <span style="color:#f92672">[</span>all<span style="color:#f92672">]</span> **************************************************************************************************************************
+
+TASK <span style="color:#f92672">[</span>Gathering Facts<span style="color:#f92672">]</span> **************************************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>base : Automatic Updates pkg install<span style="color:#f92672">]</span> *****************************************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
+
+TASK <span style="color:#f92672">[</span>base : Automatic Updates config file copy to remote server<span style="color:#f92672">]</span> *******************************************************************
+ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">(</span>item<span style="color:#f92672">=</span>50unattended-upgrades<span style="color:#f92672">)</span>
+changed: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">(</span>item<span style="color:#f92672">=</span>20auto-upgrades<span style="color:#f92672">)</span>
+
+PLAY RECAP **************************************************************************************************************************
+localhost                  : ok<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>    changed<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>    unreachable<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    failed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    skipped<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    rescued<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    ignored<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</code></pre></div><h4 id="auto-upgradeの実行状況を把握する">auto upgradeの実行状況を把握する</h4>
+<p>Documentにある通り、apticronを使用して実現する</p>
+<ul>
+<li>複数のパッケージインストールになったので、ansibleの設定を修正し、新たにapticronの設定を追加</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">diff --git a/base/tasks/automatic-updates.yml b/base/tasks/automatic-updates.yml
+index 88c34e1..cb71018 100644
+<span style="color:#f92672">--- a/base/tasks/automatic-updates.yml
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/base/tasks/automatic-updates.yml
+</span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -1,12 +1,18 @@
+</span><span style="color:#75715e"></span> ---
+ - name: Automatic Updates pkg install
+   apt:
+<span style="color:#f92672">-    name: unattended-upgrades
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+    pkg:
+</span><span style="color:#a6e22e">+      - unattended-upgrades
+</span><span style="color:#a6e22e">+      - apticron
+</span><span style="color:#a6e22e"></span>     state: present
+ - name: Automatic Updates config file copy to remote server
+   copy:
+<span style="color:#f92672">-    src: &#34;{{ role_path }}/files/etc/apt/apt.conf.d/{{ item }}&#34;
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+    src:  &#34;{{ role_path }}/files/etc/apt/apt.conf.d/{{ item }}&#34;
+</span><span style="color:#a6e22e"></span>     dest: &#34;/etc/apt/apt.conf.d/{{ item }}&#34;
+   with_items:
+     - 50unattended-upgrades
+     - 20auto-upgrades
+<span style="color:#a6e22e">+- name: apticron config file copy to remote server
+</span><span style="color:#a6e22e">+  copy:
+</span><span style="color:#a6e22e">+    src:  &#34;{{ role_path }}/files/etc/apticron/apticron.conf&#34;
+</span><span style="color:#a6e22e">+    dest: &#34;/etc/apticron/apticron.conf&#34;
+</span></code></pre></div><ul>
+<li>ansible実行</li>
+</ul>
+<pre><code>23:45 $ ansible-playbook -i inventory  -l ubuntu -b playbook.yml
+
+PLAY [all] **************************************************************************************************************************
+
+TASK [Gathering Facts] **************************************************************************************************************
+ok: [localhost]
+
+TASK [base : Automatic Updates pkg install] *****************************************************************************************
+ok: [localhost]
+
+TASK [base : Automatic Updates config file copy to remote server] *******************************************************************
+ok: [localhost] =&gt; (item=50unattended-upgrades)
+ok: [localhost] =&gt; (item=20auto-upgrades)
+
+TASK [base : apticron config file copy to remote server] ****************************************************************************
+changed: [localhost]
+
+PLAY RECAP **************************************************************************************************************************
+localhost                  : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+</code></pre><ul>
+<li>実際にサーバに入って確認してみるとcronの設定がされていた</li>
+<li>毎時7分だったので、まだ実行されたログはなかった</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+root@ubuntu-focal:/home/ansible# more /etc/cron.d/apticron
+<span style="color:#75715e"># cron entry for apticron</span>
+
+<span style="color:#ae81ff">7</span> * * * * root <span style="color:#66d9ef">if</span> test -x /usr/sbin/apticron; <span style="color:#66d9ef">then</span> /usr/sbin/apticron --cron; <span style="color:#66d9ef">else</span> true; <span style="color:#66d9ef">fi</span>
+</code></pre></div><ul>
+<li>このファイルも管理対象に加える</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">diff --git a/base/files/etc/cron.d/apticron b/base/files/etc/cron.d/apticron
+new file mode 100644
+index 0000000..470408b
+<span style="color:#f92672">--- /dev/null
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/base/files/etc/cron.d/apticron
+</span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -0,0 +1,3 @@
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">+# cron entry for apticron
+</span><span style="color:#a6e22e">+
+</span><span style="color:#a6e22e">+7 * * * * root if test -x /usr/sbin/apticron; then /usr/sbin/apticron --cron; else true; fi
+</span><span style="color:#a6e22e"></span>diff --git a/base/tasks/automatic-updates.yml b/base/tasks/automatic-updates.yml
+index cb71018..fb7bcad 100644
+<span style="color:#f92672">--- a/base/tasks/automatic-updates.yml
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/base/tasks/automatic-updates.yml
+</span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -14,5 +14,8 @@
+</span><span style="color:#75715e"></span>     - 20auto-upgrades
+ - name: apticron config file copy to remote server
+   copy:
+<span style="color:#f92672">-    src:  &#34;{{ role_path }}/files/etc/apticron/apticron.conf&#34;
+</span><span style="color:#f92672">-    dest: &#34;/etc/apticron/apticron.conf&#34;
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+    src:  &#34;{{ role_path }}/files/etc/{{ item.src }}&#34;
+</span><span style="color:#a6e22e">+    dest: &#34;/etc/{{ item.dest }}&#34;
+</span><span style="color:#a6e22e">+  with_items:
+</span><span style="color:#a6e22e">+    - { src: &#39;apticron/apticron.conf&#39;, dest: &#39;apticron/apticron.conf&#39; }
+</span><span style="color:#a6e22e">+    - { src: &#39;cron.d/apticron&#39;, dest: &#39;cron.d/apticron&#39; }
+</span></code></pre></div><ul>
+<li>cronの実行時間を5分に変更</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">diff --git a/base/files/etc/cron.d/apticron b/base/files/etc/cron.d/apticron
+index 470408b..4c5c5da 100644
+<span style="color:#f92672">--- a/base/files/etc/cron.d/apticron
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/base/files/etc/cron.d/apticron
+</span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -1,3 +1,3 @@
+</span><span style="color:#75715e"></span> # cron entry for apticron
+
+<span style="color:#f92672">-7 * * * * root if test -x /usr/sbin/apticron; then /usr/sbin/apticron --cron; else true; fi
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+5 * * * * root if test -x /usr/sbin/apticron; then /usr/sbin/apticron --cron; else true; fi
+</span></code></pre></div><ul>
+<li>実行ログの確認</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Jan  <span style="color:#ae81ff">3</span> 15:05:01 ubuntu-focal CRON<span style="color:#f92672">[</span>36384<span style="color:#f92672">]</span>: <span style="color:#f92672">(</span>root<span style="color:#f92672">)</span> CMD <span style="color:#f92672">(</span><span style="color:#66d9ef">if</span> test -x /usr/sbin/apticron; <span style="color:#66d9ef">then</span> /usr/sbin/apticron --cron; <span style="color:#66d9ef">else</span> true; <span style="color:#66d9ef">fi</span><span style="color:#f92672">)</span>
+</code></pre></div><h4 id="auto-upgradeの実行状況の確認">auto upgradeの実行状況の確認</h4>
+<ul>
+<li>mail.logを確認したところ、Connection timed outで配送できていなかったので、queueの中身を確認</li>
+</ul>
+<pre><code>root@ubuntu-focal:/home/ansible# mailq
+-Queue ID-  --Size-- ----Arrival Time---- -Sender/Recipient-------
+E0303BCD87     5433 Sun Jan  3 15:05:08  root@ubuntu-focal
+(connect to alt2.gmail-smtp-in.l.google.com[2607:f8b0:4003:c0b::1a]:25: Network is unreachable)
+                                         hogemoge@gmail.com
+
+-- 5 Kbytes in 1 Request.
+root@ubuntu-focal:/home/ansible# postcat -q E0303BCD87
+*** ENVELOPE RECORDS deferred/E/E0303BCD87 ***
+message_size:            5433             190               1               0            5433               0
+message_arrival_time: Sun Jan  3 15:05:08 2021
+create_time: Sun Jan  3 15:05:08 2021
+named_attribute: rewrite_context=local
+sender_fullname: root
+sender: root@ubuntu-focal
+*** MESSAGE CONTENTS deferred/E/E0303BCD87 ***
+Received: by ubuntu-focal (Postfix, from userid 0)
+	id E0303BCD87; Sun,  3 Jan 2021 15:05:08 +0000 (UTC)
+To: hogemoge@gmail.com
+Subject: 4 Ubuntu package update(s) for ubuntu-focal
+MIME-Version: 1.0
+Content-type: text/plain; charset=UTF-8
+Content-transfer-encoding: 8bit
+Message-Id: &lt;20210103150508.E0303BCD87@ubuntu-focal&gt;
+Date: Sun,  3 Jan 2021 15:05:08 +0000 (UTC)
+From: root &lt;root@ubuntu-focal&gt;
+
+apticron report [Sun, 03 Jan 2021 15:05:08 +0000]
+========================================================================
+
+apticron has detected that some packages need upgrading on:
+
+	ubuntu-focal
+	[ 10.0.2.15 ]
+
+The following packages are currently pending an upgrade:
+
+	apport 2.20.11-0ubuntu27.14
+	open-vm-tools 2:11.1.5-1~ubuntu20.04.2
+	python3-apport 2.20.11-0ubuntu27.14
+	python3-problem-report 2.20.11-0ubuntu27.14
+
+========================================================================
+
+Package Details:
+
+apt-listchanges: Reading changelogs...
+apt-listchanges: Changelogs
+---------------------------
+
+--- Changes for apport (apport python3-apport python3-problem-report) ---
+apport (2.20.11-0ubuntu27.14) focal; urgency=medium
+
+  * data/apport: only drop supplemental groups if the user is root. (LP: #1906565)
+
+ -- Brian Murray &lt;brian@ubuntu.com&gt;  Thu, 03 Dec 2020 09:26:27 -0800
+
+--- Changes for open-vm-tools ---
+open-vm-tools (2:11.1.5-1~ubuntu20.04.2) focal; urgency=medium
+
+  * Update to latest release v11.1.5 (LP: #1892266)
+    - Revert &quot;Add net-tools as dependency again.&quot; as we don't want to
+      modify the focal seed/ISO content without a real issue behind it.
+
+ -- Christian Ehrhardt &lt;christian.ehrhardt@canonical.com&gt;  Mon, 22 Jun 2020 08:40:58 +0200
+
+open-vm-tools (2:11.1.5-1ubuntu1) groovy; urgency=medium
+
+  * d/p/fix-FTBFS-glibc2.32.patch: fix tirpc flags to propagate correctly
+    fixing an FTFBS with glibc &gt;=2.32
+  * d/rules: avoid FTBFS by ignoring nonnull errors for now
+
+ -- Christian Ehrhardt &lt;christian.ehrhardt@canonical.com&gt;  Tue, 29 Sep 2020 13:37:20 +0200
+
+open-vm-tools (2:11.1.5-1) unstable; urgency=medium
+
+  * [5515c98] Don't recommend xserver-xorg-input-vmmouse.
+    Thanks to Raphaël Hertzog (Closes: #966465)
+  * [8a31efc] Update upstream source from tag 'upstream/11.1.5'
+    Update to upstream version '11.1.5'
+    with Debian dir 62c70f15b660e7719555a78e6658ced5ca05ca35
+    Closes: #968688
+  * [09714a7] Removing patches that were applied upstream
+
+ -- Bernd Zeimetz &lt;bzed@debian.org&gt;  Thu, 20 Aug 2020 09:52:24 +0200
+
+open-vm-tools (2:11.1.0-3) unstable; urgency=medium
+
+  * [03d18b3] Fix gcc-10 related issues. (Closes: #957631)
+
+ -- Bernd Zeimetz &lt;bzed@debian.org&gt;  Mon, 27 Jul 2020 22:38:58 +0200
+
+open-vm-tools (2:11.1.0-2) unstable; urgency=medium
+
+  [ Christian Ehrhardt ]
+  * [4d69c6a] d/p/lp-1877678-: fixes for the sdmp plugin that is new in 11.1.0.
+    Signed-off-by: Christian Ehrhardt &lt;christian.ehrhardt@canonical.com&gt;
+  * [38bd11e] d/control: change net-tools dependency to iproute2.
+    Signed-off-by: Christian Ehrhardt &lt;christian.ehrhardt@canonical.com&gt;
+
+  [ Bernd Zeimetz ]
+  * [c15c08d] Add net-tools as dependency again.
+    Various scripts still use ifconfig.
+
+ -- Bernd Zeimetz &lt;bzed@debian.org&gt;  Fri, 19 Jun 2020 14:05:44 +0200
+
+open-vm-tools (2:11.1.0-1) unstable; urgency=medium
+
+  [ Christian Ehrhardt ]
+  * [6b7d31d] New upstream version 11.1.0
+    (Closes: #960061) (LP: #1877672)
+  * [3ece93a14] d/control, d/rules, d//*sdmp*: add service discovery plugin (sdmp)
+    (Closes: #960065) (LP: #1877678)
+    Thanks to Oliver Kurth for the initial contribution, changes in addition:
+    - d/control: improve description
+    - rules fix whitespace damage
+    - maintscripts: fixed some whihtespace damage
+    - maintscripts: fixed maintainer scripts per skeletons from dh_make
+    - maintscripts: added the service-active-before-restart check to postinst
+      as well (was only in rm)
+    - maintscripts: use deb-systemd-invoke
+    - d/control: add further dependencies used in sdmp
+  * [e0c9fbc14] remove patches applied upstream in 11.1.0
+    - d/p/4ee0bd3c8_Rectify-a-log-spew-in-vmsvc-logging-vmware-vmsvc-root.log
+    - d/p/89c0d4445_GitHub-Issue-367.-Remove-references-to-deprecated-G_INLINE_FUNC
+    - d/p/f1f0b812e_add-appinfo-plugin
+  * [f4cf14931] d/rules: drop perm fixup of vm-support as it is properly
+    in /usr/bin/ now
+  * [d71e99e33] lintian: add overrides for intentional cases
+  * [ba27a73eb] d/p/debian/vmxnet_fix_kernel_4.7.patch: drop unused patch
+  * [7488e6e2f] d/copyright: fix tab in text
+
+ -- Bernd Zeimetz &lt;bzed@debian.org&gt;  Fri, 29 May 2020 09:46:40 +0200
+
+open-vm-tools (2:11.0.5-5) unstable; urgency=medium
+
+  * [8700b5e] Revert &quot;Run vmtoolsd with Nice=-20&quot;
+    After discussing this issue with upstream we came to the conclusion that
+    reverting this is the best option as it is possible to start programs
+    trough vmtoolsd and they would also run with a nice level of -20.
+    Upstream will fix this issue in a sane way.
+  * [8a3a303] Add appinfo plugin.
+    Thanks to Oliver Kurth (Closes: #954958)
+
+ -- Bernd Zeimetz &lt;bzed@debian.org&gt;  Thu, 09 Apr 2020 11:42:15 +0200
+
+========================================================================
+
+You can perform the upgrade by issuing the command:
+
+	apt-get dist-upgrade
+
+as root on ubuntu-focal
+
+--
+apticron
+*** HEADER EXTRACTED deferred/E/E0303BCD87 ***
+named_attribute: encoding=8bit
+named_attribute: dsn_orig_rcpt=rfc822;hogemoge@gmail.com
+original_recipient: hogemoge@gmail.com
+recipient: hogemoge@gmail.com
+*** MESSAGE FILE END deferred/E/E0303BCD87 ***
+
+</code></pre><ul>
+<li>mailのエラーは別途原因調査して修正する</li>
+</ul>
+</div>
+				
+				<footer class="entry__footer">
+					
+<div class="entry__tags">
+			<a class="entry__tag btn" href="/tags/ubuntu/">Ubuntu</a>
+			<a class="entry__tag btn" href="/tags/ansible/">Ansible</a>
+</div>
+					
+<div class="entry__share share">
+	<a class="share__link btn" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftshu1.tech%2fposts%2f2021-01-04%2f" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Share on Facebook', 'width=800,height=600,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="Facebook" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M330 512V322h64l9-74h-73v-47c0-22 6-36 37-36h39V99c-7-1-30-3-57-3-57 0-95 34-95 98v54h-64v74h64v190z"/></svg>
+	</a>
+	<a class="share__link btn" title="Share on Twitter" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2ftshu1.tech%2fposts%2f2021-01-04%2f&amp;text=Automatic%20Updates" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Share on Twitter', 'width=800,height=450,resizable=yes,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="Twitter" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+	</a>
+	<a class="share__link btn" title="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftshu1.tech%2fposts%2f2021-01-04%2f&title=Automatic%20Updates" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Share on LinkedIn', 'width=640,height=480,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="LinkedIn" role="img" width="32" height="32" viewBox="0 0 512 512"><circle cx="142" cy="138" r="37"/><path stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+	</a>
+	<a class="share__link btn" title="Save to Pocket" href="https://getpocket.com/edit?url=https%3a%2f%2ftshu1.tech%2fposts%2f2021-01-04%2f&amp;title=Automatic%20Updates" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, 'Save to Pocket', 'width=480,height=320,toolbar=0,status=0'); return false">
+		<svg class="share__icon" aria-label="Pocket" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M388.8 88.9H123.2A47.4 47.4 0 0 0 76 136.5v131.9c0 2.4.2 4.8.5 7.2a101.8 101.8 0 0 0-.5 10.6c0 75.6 80.6 137 180 137s180-61.4 180-137c0-3.6-.2-7.1-.5-10.6.3-2.4.5-4.8.5-7.2v-132A47.4 47.4 0 0 0 388.8 89zm-22.4 132.6l-93 93c-4.7 4.6-11 7-17.1 7a23.8 23.8 0 0 1-17.7-7l-93-93a24 24 0 0 1 33.8-33.8l76.6 76.5 76.6-76.5a24 24 0 0 1 33.8 33.8z"/></svg>
+	</a>
+</div>
+				</footer>
+				
+			</article>
+		</div>
+	</main>
+	
+<div class="authorbox block">
+	<div class="author">
+		<div class="author__body">
+			<div class="author__name">
+				tshu1
+			</div>
+			<div class="author__bio">I am Infrastructure Engineer and MRE(Messaging service Reliability Engineer).</div>
+		</div>
+	</div>
+</div>
+	
+
+
+
+	
+
+	</div>
+	<footer class="footer">
+<div class="footer__social social">
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://twitter.com/tshu110">
+			<svg class="social__icon" aria-label="Twitter" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+		</a>
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/tshu1">
+			<svg class="social__icon" aria-label="LinkedIn" role="img" width="32" height="32" viewBox="0 0 512 512"><circle cx="142" cy="138" r="37"/><path stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+		</a>
+		<a class="social__link" target="_blank" rel="noopener noreferrer" href="https://github.com/tshu1">
+			<svg class="social__icon" aria-label="Github" role="img" width="32" height="32" viewBox="0 0 512 512"><path d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+		</a>
+</div>
+	<div class="footer__copyright">© 2021 Binario. <span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/vimux/binario" rel="nofollow noopener" target="_blank">Binario</a> theme.</span></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+
+</body>
+</html>

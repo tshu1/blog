@@ -5,29 +5,29 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#1b1b1b">
-	<title>Categories | Try and Error</title>
+	<title>Ansible | Try and Error</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Categories" />
+		<meta property="og:title" content="Ansible" />
 <meta property="og:description" content="Responsive card-based &amp; code-light Hugo theme" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://tshu1.tech/categories/" />
+<meta property="og:url" content="https://tshu1.tech/tags/ansible/" />
 <meta property="og:updated_time" content="2021-01-04T00:30:03+09:00" />
 
-		<meta itemprop="name" content="Categories">
+		<meta itemprop="name" content="Ansible">
 <meta itemprop="description" content="Responsive card-based &amp; code-light Hugo theme">
 
 		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
+<meta name="twitter:title" content="Ansible"/>
 <meta name="twitter:description" content="Responsive card-based &amp; code-light Hugo theme"/>
 
 	<link rel="stylesheet" href="/css/bundle.css">
 	<link rel="icon" href="/icons/16.png" sizes="16x16" type="image/png">
 	<link rel="icon" href="/icons/32.png" sizes="32x32" type="image/png">
-	<link rel="alternate" type="application/rss+xml" href="/categories/index.xml" title="Try and Error">
+	<link rel="alternate" type="application/rss+xml" href="/tags/ansible/index.xml" title="Try and Error">
 		
 </head>
-<body class="body kind-taxonomy">
+<body class="body kind-term">
 	<header class="header">
 	<a class="logo" href="/">Try and Error</a>
 	
@@ -42,29 +42,30 @@
 		<li class="breadcrumb__item">
 			<a class="breadcrumbs__link" href="/">Blog</a>
 		</li>
-		<li class="breadcrumbs__item breadcrumb__item--active" aria-current="page">Categories</li>
+		<li class="breadcrumb__item">
+			<a class="breadcrumbs__link" href="/tags/">Tags</a>
+		</li>
+		<li class="breadcrumbs__item breadcrumb__item--active" aria-current="page">Ansible</li>
 	</ol>
 </nav>
 		<div class="page block">
-			<h1 class="page__title">Categories</h1>
+			<h1 class="page__title">Ansible</h1>
 			
 		</div>
 		<div class="cards">
 			
 				<div class="card card--2col">
 					<article class="entry card__box block">
-	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/categories/linux/">Linux</a></h1>
+	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/posts/2021-01-04/">Automatic Updates</a></h1>
+	<div class="entry__content">この記事について  CentOSの終了に伴って、Ubuntuへ移行するとしたら、どのような設定を実施するかを調査し、実際に設定した内容についてまとめるものです 項目が多岐に渡るので、空いた時間でアウトプットできる単位で、まとめていきます すべてを試す訳ではなく、必要と思われるものや今後使えそうなものについて記載していきます 構築するにあたり、ansibleで実装していきます  参考ドキュメント https://ubuntu.com/server/docs/installation
+前提  検証用のサーバとして構築する  Automatic Updates タスクの新規作成 --- /dev/null +++ b/base/tasks/automatic-updates.yml @@ -0,0 +1,5 @@ +--- +- name: Automatic Updates + apt: + name: unattended-upgrades + state: present diff --git a/base/tasks/main.yml b/base/tasks/main.yml index 99a3e15..efa92af 100644 --- a/base/tasks/main.yml +++ b/base/tasks/main.yml @@ -1,2 +1,3 @@  --- # tasks file for base +- include: automatic-updates.yml ansible実行 22:21 $ ansible-playbook -i inventory -l ubuntu -b playbook.</div>
 	<div class="entry__meta meta mt tar">
 	<time class="entry__meta-published meta-published" datetime="2021-01-04T00:30:03&#43;09:00">January 04, 2021</time>
-	</div>
-</article>
-				</div>
-			
-				<div class="card card--2col">
-					<article class="entry card__box block">
-	<h1 class="entry__title title-excerpt"><a class="entry__title-link" href="/categories/other/">other</a></h1>
-	<div class="entry__meta meta mt tar">
-	<time class="entry__meta-published meta-published" datetime="2020-10-25T22:48:42&#43;09:00">October 25, 2020</time>
+<span class="entry__meta-categories meta-categories">
+	<span class="meta-categories__list">Categories:
+		<a class="meta-categories__link" href="/categories/linux/" rel="category">Linux</a>
+	</span>
+</span>
 	</div>
 </article>
 				</div>

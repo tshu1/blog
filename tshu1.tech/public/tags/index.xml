@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Try and Error</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sun, 25 Oct 2020 22:48:42 +0900</lastBuildDate><atom:link href="https://tshu1.tech/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2021 00:30:03 +0900</lastBuildDate><atom:link href="https://tshu1.tech/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible</title>
+      <link>https://tshu1.tech/tags/ansible/</link>
+      <pubDate>Mon, 04 Jan 2021 00:30:03 +0900</pubDate>
+      
+      <guid>https://tshu1.tech/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://tshu1.tech/tags/ubuntu/</link>
+      <pubDate>Mon, 04 Jan 2021 00:30:03 +0900</pubDate>
+      
+      <guid>https://tshu1.tech/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>blog</title>
       <link>https://tshu1.tech/tags/blog/</link>
